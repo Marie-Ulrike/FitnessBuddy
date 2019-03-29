@@ -1,6 +1,6 @@
-<h1>Welcome! Please sign up to FitnessBuddy</h1>
+<h1>Hi there! <br> Please sign up to FitnessBuddy</h1>
 
-<form id="signup" name="signup" method="POST" action="/users/signup">
+<form id="signup" name="signup" method="POST" action="/users/register">
     <div>
         <label for="name">First Name: </label>
         <input type="text" name="FirstName" required>
@@ -8,6 +8,18 @@
     <div>
         <label for="name">Last Name: </label>
         <input type="text" name="LastName" required>
+    </div>
+    <div>
+        <select name="gender" required>
+            <option value="None selected">Please select below</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+    <div>
+        <label for="age">Age: </label>
+        <input type="number" name="Age" required>
     </div>
     <div>
         <label for="name">Email: </label>
@@ -22,6 +34,6 @@
         <input type="text" name="Password" required>
     </div>
     <div>
-        <button type="submit">Submit</button>
+        <button type="submit">Register</button>
     </div>
 </form>

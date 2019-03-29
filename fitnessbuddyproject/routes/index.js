@@ -10,6 +10,12 @@ const db = new sqlite.Database('./fitnessdb.sqlite', err => {
   }
   console.log('Yay! You are connected to the database!');
 });
+const query = `SELECT * from FoodItems`;
+
+db.all(query, (err, row) => {
+  if (err) throw err;
+  console.log(row);
+});
 
 /* GET home page. */
 router.get('/home', function(req, res, next) {
